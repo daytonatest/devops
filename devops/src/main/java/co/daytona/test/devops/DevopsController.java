@@ -20,6 +20,9 @@ public class DevopsController {
 		skills.add("Docker");
 		skills.add("Kubernetes");
 		skills.add("AWS");
+		skills.add("GCloud");
+		skills.add("Puppet");
+		skills.add("Ansible");
 		return new ResponseEntity<List<String>>(skills, HttpStatus.OK);
 	}
 }

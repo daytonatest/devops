@@ -28,9 +28,9 @@ public class DevopsApplicationTests {
 					.andDo(MockMvcResultHandlers.print()).andExpect(MockMvcResultMatchers.status().isOk())
 					.andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
 					.andExpect(MockMvcResultMatchers.jsonPath("$").isArray())
-					.andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(5)))
-					.andExpect(MockMvcResultMatchers.jsonPath("$",
-							Matchers.containsInAnyOrder("Jenkins", "Maven", "Docker", "Kubernetes", "AWS")));
+					.andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(8)))
+					.andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.containsInAnyOrder("Jenkins", "Maven",
+							"Docker", "Kubernetes", "AWS", "GCloud", "Puppet", "Ansible")));
 		} catch (Exception e) {
 
 			e.printStackTrace();
